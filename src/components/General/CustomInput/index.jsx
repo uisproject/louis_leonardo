@@ -1,15 +1,16 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const CustomInput = ({ placeholder, className }) => {
+const CustomInput = forwardRef((props, ref) => {
   return (
-    <>
+    <div>
       <input
+        ref={ref}
         type="text"
-        placeholder={placeholder}
-        className={`rounded-xl border-2 border-slate-200 py-1 px-3 w-[100%] ${className}`}
+        {...props}
+        className={`rounded-xl border-2 border-slate-200 py-1 px-3 w-[100%]`}
       />
-    </>
+    </div>
   );
-};
+});
 
 export default CustomInput;
