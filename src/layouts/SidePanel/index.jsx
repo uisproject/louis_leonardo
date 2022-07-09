@@ -1,7 +1,8 @@
 import React from "react";
+import SidePanelWrapper from "@/components/General/SidePanelWrapper";
 
-const index = () => {
-  return <div>index</div>;
+const SidePanel = () => {
+  return <SidePanelWrapper>This is side panel</SidePanelWrapper>;
 };
 
-export default index;
+export default SidePanel;

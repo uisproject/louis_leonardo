@@ -1,7 +1,17 @@
 import React from "react";
+import Navigation from "../Navigation";
+import SidePanel from "../SidePanel";
 
-const index = () => {
-  return <div>index</div>;
+const MainLayout = ({ children }) => {
+  return (
+    <div className="px-[2em]">
+      <Navigation />
+      <div className="flex">
+        <SidePanel />
+        <div>{children}</div>
+      </div>
+    </div>
+  );
 };
 
-export default index;
+export default MainLayout;
