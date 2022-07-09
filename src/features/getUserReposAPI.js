@@ -4,6 +4,7 @@ import { BASE_URL } from "@/api/api";
 
 const initialState = {
   userRepos: [],
+  filteredRepo: [],
   isLoading: true,
 };
 
@@ -19,10 +20,19 @@ export const getUserReposService = createAsyncThunk(
 const getUserReposAPISlice = createSlice({
   name: "api/getUserRepos",
   initialState,
-  reducers: {},
+  reducers: {
+    setSearch: (state, { payload }) => {
+      const newData = state.userRepos.filter((repo) =>
+        repo.name.includes(payload)
+      );
+
+      state.filteredRepo = newData;
+    },
+  },
   extraReducers: {
     [getUserReposService.fulfilled]: (state, { payload }) => {
       state.userRepos = payload;
+      state.filteredRepo = payload;
       state.isLoading = false;
     },
     [getUserReposService.rejected]: (state, action) => {
@@ -35,5 +45,7 @@ export const useGetUserReposAPI = () => {
   const state = useSelector((state) => state.getUserRepos);
   return state;
 };
+
+export const { setSearch } = getUserReposAPISlice.actions;
 
 export default getUserReposAPISlice.reducer;
