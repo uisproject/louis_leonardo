@@ -10,11 +10,11 @@ const SidePanel = () => {
     <SidePanelWrapper>
       <div className="w-[340px]">
         <img
-          className="w-[90%] rounded-full mt-[-25px]"
+          className="w-[90%] rounded-full mt-[-25px] "
           src={`${userData?.avatar_url}`}
           alt="avatar"
         />
-        <div className="text-[#57606a] text-[24px]">{userData?.login}</div>
+        <div className="text-[#57606a] text-[24px] mb-2">{userData?.login}</div>
         <div className="flex">
           <div className="flex items-center mr-1">
             <div className="mr-1">
