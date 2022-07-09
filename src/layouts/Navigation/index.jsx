@@ -9,7 +9,7 @@ const Navigation = () => {
     <div className="border-b-2">
       <div className="flex px-[10em] min-h-[3em] ">
         <SidePanelWrapper />
-        <div className="flex">
+        <div className="flex pl-5">
           <CustomLink
             useActive={true}
             className="mr-5"
