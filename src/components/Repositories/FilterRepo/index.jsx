@@ -20,7 +20,6 @@ const FilterRepo = () => {
           placeholder="Find a repository"
         />
       </div>
-      <CustomButton type="primary">Search</CustomButton>
     </div>
   );
 };
