@@ -3,7 +3,7 @@ import { useSelector } from "react-redux/";
 import { BASE_URL } from "@/api/api";
 
 const initialState = {
-  data: [],
+  userData: null,
   isLoading: true,
 };
 
@@ -21,15 +21,12 @@ const getUserAPISlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [getUserService.pending]: (state, action) => {
-      console.log("pending");
-    },
     [getUserService.fulfilled]: (state, { payload }) => {
-      console.log(payload);
-      console.log("fulfilled");
+      state.userData = payload;
+      state.isLoading = false;
     },
     [getUserService.rejected]: (state, action) => {
-      console.log("rejected");
+      state.isLoading = true;
     },
   },
 });
