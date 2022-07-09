@@ -10,8 +10,7 @@ const CustomLink = ({
   href = "#",
 }) => {
   const router = useRouter();
-  console.log(router.asPath);
-  console.log(href);
+
   return (
     <Link href={href} passHref={true}>
       <a
