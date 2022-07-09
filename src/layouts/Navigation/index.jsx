@@ -6,9 +6,11 @@ import CustomLink from "@/components/General/CustomLink";
 
 const Navigation = () => {
   return (
-    <div className="border-b-2">
-      <div className="flex px-[10em] min-h-[3em] ">
-        <SidePanelWrapper />
+    <div className="border-b-2 sticky top-0 bg-white">
+      <div className="flex xl:px-[10em] lg:px-[5em]  min-h-[3em] ">
+        <div className="hidden md:block">
+          <SidePanelWrapper />
+        </div>
         <div className="flex pl-5">
           <CustomLink
             useActive={true}

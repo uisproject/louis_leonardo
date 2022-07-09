@@ -15,8 +15,8 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Navigation />
-      <div className="px-[10em]">
-        <div className="flex">
+      <div className=" px-[2em] xl:px-[10em] lg:px-[5em]">
+        <div className="flex flex-col md:flex-row">
           <SidePanel />
           <div className="w-[100%]">{children}</div>
         </div>

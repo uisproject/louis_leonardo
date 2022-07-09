@@ -12,7 +12,7 @@ const SidePanel = () => {
         <SidePanelWrapper>
           <div className="w-[340px]">
             <img
-              className="w-[90%] rounded-full mt-[-25px] "
+              className="w-[90%] rounded-full mt-[10px] md:mt-[-25px] relative z-10"
               src={`${userData?.avatar_url}`}
               alt="avatar"
             />
