@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
       <div className="px-[10em]">
         <div className="flex">
           <SidePanel />
-          <div className="w-[100%] pt-5">{children}</div>
+          <div className="w-[100%]">{children}</div>
         </div>
       </div>
     </>
