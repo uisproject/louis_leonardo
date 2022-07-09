@@ -13,13 +13,15 @@ const MainLayout = ({ children }) => {
   }, []);
 
   return (
-    <div className="px-[2em]">
+    <>
       <Navigation />
-      <div className="flex">
-        <SidePanel />
-        <div className="w-[100%] pt-5">{children}</div>
+      <div className="px-[10em]">
+        <div className="flex">
+          <SidePanel />
+          <div className="w-[100%] pt-5">{children}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
