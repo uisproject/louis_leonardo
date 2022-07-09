@@ -22,11 +22,13 @@ const getUserReposAPISlice = createSlice({
   initialState,
   reducers: {
     setSearch: (state, { payload }) => {
+      state.isLoading = true;
       const newData = state.userRepos.filter((repo) =>
         repo.name.includes(payload)
       );
 
       state.filteredRepo = newData;
+      state.isLoading = false;
     },
   },
   extraReducers: {
