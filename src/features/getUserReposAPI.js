@@ -34,7 +34,7 @@ const getUserReposAPISlice = createSlice({
   },
 });
 
-export const useGetUserAPI = () => {
+export const useGetUserReposAPI = () => {
   const state = useSelector((state) => state.getUserRepos);
   return state;
 };
