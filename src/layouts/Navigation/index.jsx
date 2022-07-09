@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
     <div className="flex min-h-[3em] border-b-2">
       <SidePanelWrapper />
-      <div className="flex flex-wrap">
+      <div className="flex">
         <CustomLink
           useActive={true}
           className="mr-5"
