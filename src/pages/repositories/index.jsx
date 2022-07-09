@@ -17,14 +17,18 @@ const RepositoriesPage = () => {
   return (
     <MainLayout>
       <div className="mb-5">
-        <FilterRepo />
-        <hr className="border-[#bcbcbc]" />
-        {isLoading
-          ? "Is loading"
-          : filteredRepo.map((repo, index) => (
+        {!isLoading ? (
+          <div>
+            <FilterRepo />
+            <hr className="border-[#bcbcbc]" />
+            {filteredRepo.map((repo, index) => (
               <RepoItem key={index} {...repo} />
             ))}
-        <hr className="border-[#bcbcbc]" />
+            <hr className="border-[#bcbcbc]" />
+          </div>
+        ) : (
+          "Loading..."
+        )}
       </div>
     </MainLayout>
   );
